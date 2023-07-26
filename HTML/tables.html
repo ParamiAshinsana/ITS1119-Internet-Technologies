@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+</head>
+<body>
+
+<h1>HTML Tables</h1>
+
+<table border="50">
+<!--    heads danne meken-->
+    <thead>
+    <th id="id">Id</th>
+    <th id="fname">FName</th>
+    <th id="lname">LName</th>
+    <th id="address">Address</th>
+    </thead>
+
+    <tbody>
+<!--    this is 1st row-->
+    <tr>
+        <td headers="id">1</td>
+        <td headers="fname">Parami</td>
+        <td headers="lname">Ashinsana</td>
+        <td headers="address">Panadura</td>
+    </tr>
+
+<tr>
+    <td headers="id">2</td>
+    <td headers="fname">Dewni</td>
+    <td headers="lname">Diwyanjala</td>
+    <td headers="address">Wekada</td>
+</tr>
+
+<tr>
+    <td headers="id">3</td>
+    <td headers="fname">Yasandi</td>
+    <td headers="lname">Sehansa</td>
+    <td headers="address">Hirana</td>
+</tr>
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+    <th id="subject">Subjects</th>
+    <th id="min">Min</th>
+    <th id="max">Max</th>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th id="english">English</th>
+        <td headers="min english">Kaveen</td>
+        <td headers="max english">Tharindu</td>
+    </tr>
+
+    <tr>
+        <th id="maths">Maths</th>
+        <td headers="min maths">Janith</td>
+        <td headers="max maths">Maneesha</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+
+<h3>Colspan</h3>
+<table border="1">
+<thead>
+<th colspan="2">Name</th>
+<th>Marks</th>
+</thead>
+
+    <tbody>
+    <tr>
+        <td>Parami</td>
+        <td>Ashinsana</td>
+        <td>85</td>
+    </tr>
+
+    <tr>
+        <td>Dewni</td>
+        <td>Diwyanjala</td>
+        <td>60</td>
+    </tr>
+
+    <tr>
+        <td colspan="2">Dewni</td>
+        <td>60</td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+
+<table border="1">
+    <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Contact</th>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Pathum</td>
+        <td>0727853051</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Sandun</td>
+        <td>0728483051</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Gagana</td>
+        <td rowspan="2">0745123051</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Nelum</td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Roshan</td>
+        <td>0775213051</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>Ashen</td>
+        <td>0704589051</td>
+    </tr>
+    </tbody>
+
+</table>
+
+<br>
+<br>
+<hr>
+<hr>
+<br>
+
+<table border="1">
+    <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th colspan="2" >Emails</th>
+    <th>Parent's Name</th>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Kavindu</td>
+        <td>kavindu@gmail.com</td>
+        <td>kavindu@gmail.com</td>
+        <td>Mr.Rathnayake</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Nimal</td>
+        <td>Nimal@gmail.com</td>
+        <td>Nimal@gmail.com</td>
+        <td>Mrs.Perera</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Sankalpa</td>
+        <td colspan="2">Sankalpa@gmail.com</td>
+        <td rowspan="2">Mr.Silva</td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>Uvindu</td>
+        <td>Uvindu@gmail.com</td>
+        <td>Uvindu@gmail.com</td>
+
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>Shehan</td>
+        <td>Shehan@gmail.com</td>
+        <td>Shehan@gmail.com</td>
+        <td>Mr.Nelson</td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>Ravindu</td>
+        <td colspan="2" rowspan="2">ravindu&ovinru@gmail.com</td>
+        <td rowspan="2">Mr.Wijethunga</td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>Ovinru</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

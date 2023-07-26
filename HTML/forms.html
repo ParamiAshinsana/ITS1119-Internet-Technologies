@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+<h1>HTML Forms</h1>
+<form>
+<!--input elements-->
+          <!--input button-->
+<h2>INPUT ELEMENT</h2>
+<h4>button type</h4>
+<input type="button" value="Click">
+
+<!--&lt;!&ndash;<input type="checkbox" checked="true">&ndash;&gt; meke checked eka default enne true vela. e hinda type ekt checked vithrk dammama athi-->
+<br>
+<br>
+<br>
+<h4>checkbox type</h4>
+<input type="checkbox" >
+<input type="checkbox" checked>
+
+<br>
+<br>
+<br>
+<h4>radio type</h4>
+<input type="radio">
+<input type="radio" checked>
+
+
+
+<br>
+<br>
+<br>
+<h4>color type</h4>
+<input type="color">
+<input type="color" value="#90EE90">
+<!--<input type="" checked>-->
+
+<br>
+<br>
+<br>
+<h4>date type</h4>
+<input type="date">
+<input type="date" value="2023-07-22">
+<!--date ekata limitaion ekk denna ona nm-->
+<input type="date" value="2023-07-22" min="2023-07-10" max="2023-07-27">
+
+<br>
+<br>
+<br>
+<h4>date & time type</h4>
+<input type="datetime-local">
+<input type="datetime-local" value="2023-07-22T19:30">
+<!--mehema me vidihata time ekt limitation ekk add krnna bah-->
+<!--<input type="datetime-local" value="2023-07-22T19:30" min="2023-07-10T19:25" max="2023-07-27T13:20">-->
+
+<br>
+<br>
+<br>
+<h4>text type</h4>
+<input type="text">
+<input type="text" value="Parami">
+<!--prompt text ekk ona nm-->
+<input type="text" placeholder="Dewni">
+
+<br>
+<br>
+<br>
+<h4>email type</h4>
+<input type="email">
+<input type="email" value="paramiashinsana@gmail.com">
+<input type="email" placeholder="type your email here">
+
+<br>
+<br>
+<br>
+<h4>url type</h4>
+<input type="url">
+<input type="url" value="ijse">
+<input type="url" placeholder="enter url here">
+
+<br>
+<br>
+<br>
+<h4>tell type</h4>
+<input type="tell" value="0742566274">
+<input type="tell" placeholder="enter your telephone number">
+<input type="tell" placeholder="enter your telephone number" pattern="[0-9]0{3}-[0-9]{3}-[0-9{4}]">
+
+<br>
+<br>
+<br>
+<h4>password type</h4>
+<input type="password">
+<input type="password" value="0742566274">
+<input type="password" placeholder="enter your password">
+
+<br>
+<br>
+<br>
+<h4>number type</h4>
+<input type="number">
+<input type="number" value="10">
+
+<br>
+<br>
+<br>
+<h4>search type</h4>
+<input type="search">
+
+<br>
+<br>
+<br>
+<h4>time type</h4>
+<input type="time">
+<input type="time" value="">
+
+<br>
+<br>
+<br>
+<h4>week type</h4>
+<input type="week">
+<input type="week" value="2023-W04">
+
+<br>
+<br>
+<br>
+<h4>month type</h4>
+<input type="month">
+<input type="month" value="2001-03">
+
+<br>
+<br>
+<br>
+<h4>range type</h4>
+<input type="range">
+<input type="range" value="90">
+
+<br>
+<br>
+<br>
+<h4>file type</h4>
+<input type="file">
+
+<br>
+<br>
+<br>
+<h4>image type</h4>
+<input type="image" src="../assets/imges/small.jpg">
+
+<br>
+<br>
+<br>
+<h4>submit type</h4>
+<input type="submit" value="SUBMIT">
+
+    <br>
+    <br>
+    <br>
+    <h4>reset type</h4>
+    <input type="reset" value="RESET">
+
+    <br>
+    <br>
+    <br>
+    <h4>hidden type</h4>
+    <input type="hidden" value="hello">
+
+</form>
+<hr>
+
+<form>
+    <h2>LABEL ELEMENT</h2>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname">
+    <br>
+    <br>
+    <label for="sname">Second Name</label><br>
+    <input type="text" id="sname">
+
+    <h4>TEXTAREA ELEMENT</h4>
+    <label for="address">Address</label><br>
+    <textarea id="address"></textarea>
+    <br>
+    <br>
+    <br>
+    <label for="ideas">Address</label><br>
+    <textarea id="ideas" cols="50" rows="10"></textarea>
+
+    <h4>SELECT ELEMENT</h4>
+    <label for="tech">Technology</label><br>
+    <select id="tech">
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="perl">Perl</option>
+        <option value="go">Go-Lang</option>
+    </select>
+
+
+    <br>
+    <br>
+    <br>
+    <h4>FIELDSET ELEMENT</h4>
+    <fieldset>
+        <legend>Choose Your Technologies</legend>
+
+        <input type="radio" id="java">
+        <label for="java">Java</label>
+
+        <input type="radio" id="python">
+        <label for="python">Python</label>
+
+        <input type="radio" id="go">
+        <label for="go">Go</label>
+    </fieldset>
+
+    <br>
+    <br>
+    <br>
+    <h4>BUTTON ELEMENT</h4>
+
+    <button type="button">Click</button>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+
+
+    <br>
+    <br>
+    <br>
+    <h4>DATALIST ELEMENT</h4>
+
+    <label for="country-input">Country</label>
+<!--    methana list ekta denna ona pahala tiyena datalist eke id ekai-->
+    <input type="text" id="country-input" list="country">
+
+    <datalist id="country">
+        <option value="sri lanka">Sri Lanka</option>
+        <option value="japan">Japan</option>
+        <option value="china">China</option>
+    </datalist>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<!--horizental ruler-->
+<hr>
+
+<form>
+    <br>
+    <br>
+    <input type="text">
+    <input type="date">
+    <input type="checkbox">
+
+    <input type="reset" value="Reset">
+
+</form>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <h4>OUTPUT ELEMENT</h4>
+    <input type="range" id="a" name="a" value="10">+
+    <input type="number" id="b" name="b" value="20">=
+    <output name="result">30</output>
+</form>
+
+<hr>
+<br>
+<br>
+<form>
+    <h4>OPTGROUP ELEMENT</h4>
+    <label for="tech2">Technology</label><br>
+    <select id="tech2">
+        <optgroup label="Programming Languages">
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="perl">Perl</option>
+            <option value="go">Go-Lang</option>
+        </optgroup>
+
+        <optgroup label="Colours">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </optgroup>
+    </select>
+</form>
+
+
+
+
+</body>
+</html>

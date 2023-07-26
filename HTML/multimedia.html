@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Adding Images-->
+<img src="../assets/imges/large.jpg" title="iphone 14" alt="iphone" width="1000" height="300" >
+
+<!-- Responsive Images - method 01-->
+<img srcset="../assets/imges/small.jpg 480w,../assets/imges/medium.jpg 800w" sizes = "(max-width : 1000px) 800px ,(max-width : 500px) 480px
+" src="../assets/imges/large.jpg"
+     title="iphone 14"
+     alt="iphone"   >
+
+<!-- Responsive Images - method 01-->
+<picture>
+    <source media="(min-width:1000px)" srcset="../assets/imges/large.jpg">
+    <source media="(min-width:800px)" srcset="../assets/imges/medium2.jpg">
+    <img src="../assets/imges/small2.jpg" alt="iphone" title="iphone 14">
+</picture>
+
+<!-- Adding Videos 01-->
+<video src="../assets/videos/car.mp4" controls="(true)">
+    <p>Plz visit www.ijse.lk to watch this video !</p>
+</video>
+
+<!-- Adding Videos 02-->
+<video controls>
+    <source src="../assets/videos/car.mp4" type="video/mp4" >
+    <source src="../assets/videos/car.webm" type="video/webm" >
+    <p>Plz visit www.ijse.lk to watch this video !</p>
+</video>
+
+<video autoplay muted loop controls>
+    <source src="../assets/videos/car.mp4" type="video/mp4" >
+    <source src="../assets/videos/car.webm" type="video/webm" >
+
+    <p>Plz visit www.ijse.lk to watch this video !</p>
+</video>
+
+<!--newest adding video-->
+<video
+       autoplay
+       muted
+       controls
+       loop
+       poster="../assets/imges/car-post.png"
+       width="700px"
+       height="400px"
+>
+    <source src="../assets/videos/car.mp4" type="video/mp4" >
+    <source src="../assets/videos/car.webm" type="video/webm" >
+    <track label="English" kind="subtitles" src="../assets/videos/subtitles/sample.vtt" srclang="en">
+    <track label="Arabic" kind="subtitles" src="../assets/videos/subtitles/arabic.vtt" srclang="ar" default>
+    <p>Plz visit www.ijse.lk to watch this video !</p>
+</video>
+
+<!--Audio-->
+<audio controls>
+    <source src="../assets/audios/audio_file1.mp3" type = "audio/mp3" >
+</audio>
+
+</body>
+</html>
