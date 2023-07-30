@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 SELECTORS</title>
+
+</head>
+<body>
+
+
+
+<h4>IJSE01</h4>
+<h4>IJSE02</h4>
+<h4>IJSE03</h4>
+<h4>IJSE04</h4>
+
+
+<h1>Internet Technologies</h1>
+<a href="http://google.com" name="google">Google</a>
+<a href="https://ibm.com">IBM</a>
+<a href="hhtp://ijse.lk">IJSE</a>
+<a href="http://ijsestudents.lkhttps">IJSE STUDENTS</a>
+<a href="https://ijse students .lk">IJSE STUDENTS</a>
+
+<h3 id="subtopic1">Content</h3>
+
+<ol>
+    <li name="google">HTML</li>
+    <li>
+        CSS
+        <ol>
+            <li>Introduction to CSS</li>
+            <li>Story to CSS</li>
+            <li>CSS Rules</li>
+            <li>CSS Selectors</li>
+            <li>Other Css Topics</li>
+        </ol>
+    </li>
+</ol>
+
+
+<section name="html">
+    <h3 id="subtopic2" class="mystyle">HTML</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+    </p>
+</section>
+
+
+
+<section>
+    <h3 class="mystyle" name="css">CSS</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+    </p>
+</section>
+
+
+
+<section name="js">
+    <h3>JS</h3>
+    <p class="mystyle" class="mystyle1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore error id impedit nulla sequi tenetur velit voluptas.
+        A atque beatae deleniti earum error illum modi nobis quam quod sapiente.
+    </p>
+</section>
+
+
+
+<style>
+    /*Type Selector(html tag ekk selector ek vdihta enne)*/
+    /*h1{*/
+    /*    color: cyan;*/
+    /*}*/
+
+    /*p{*/
+    /*    background-color: crimson;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*Id Selector(html element vlt id attribute ek danna ona)*/
+   /*#subtopic1{*/
+   /*    color:darkgreen;*/
+   /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*    Class Selector*/
+    /*.mystyle{*/
+    /*    color: deeppink;*/
+    /*    background-color: darkblue;*/
+    /*}*/
+
+    /*.mystyle1{*/
+    /*    font-weight: bold;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*Universal selector*/
+
+    /**{*/
+    /*    color: lawngreen;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*attribute selector*/
+    /*[name]{*/
+    /*    color: crimson;*/
+    /*}*/
+
+    /*************************************/
+       /*[i].attribute selector with attribute with value(=)*/
+    /*[name= "js"]{*/
+    /*   font-weight: bold;*/
+    /*}*/
+
+    /*[href]{*/
+    /*    color:deeppink;*/
+    /*}*/
+    /*[name= "js"]{*/
+    /*    font-weight: bold;*/
+    /*}*/
+    /*[href = "hhtps://ibm.com"]{*/
+    /*    color:chartreuse;*/
+    /*}*/
+
+    /*[href  ^= "https"]{*/
+    /*   background-color: darkblue;*/
+    /*}*/
+
+    /*[href  $= ".lk"]{*/
+    /*    background-color: darkblue;*/
+    /*}*/
+
+
+    /**= eken blnne e value ek e line eke kohema hri tiyenvd kylai*/
+    /*[href  *= "https"]{*/
+    /*    background-color: deepskyblue;*/
+    /*}*/
+
+    /*[href  *= "students"]{*/
+    /*    background-color: deepskyblue;*/
+    /*}*/
+
+    /*[href  ~= "students"]{*/
+    /*    background-color: deepskyblue;*/
+    /*}*/
+
+    /*[name="google"]{*/
+    /*    background-color: darkkhaki;*/
+    /*}*/
+
+
+    /*li[name="google"]{*/
+    /*    background-color: gold;*/
+    /*}*/
+
+    /*.mystyle[name]{*/
+    /*    background-color: cyan;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*pseUdo selectors*/
+    /*  i.pseUdo class---------->  (:)*/
+    /*  ii.pseUdo element---------->  (::)*/
+
+    /*  i.pseUdo class---------->  (:)*/
+    /*       :hover*/
+    /* h1:hover{*/
+    /*     color: greenyellow;*/
+    /*     cursor: pointer;*/
+    /* }*/
+
+    /*h1:active{*/
+    /*    color: darkblue;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
+    /*visited*/
+
+    /*a:visited{*/
+    /*    color: darkblue;*/
+    /*}*/
+
+    /*a:link{*/
+    /*    color: darkgoldenrod;*/
+    /*}*/
+
+    /*input:focus{*/
+    /*    background-color: chocolate;*/
+    /*}*/
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+/*first child list*/
+/*    li:first-child{*/
+/*        font-weight: bold;*/
+/*    }*/
+
+/*    !*------------------------------------------------------------------------------------------------------------------------*!*/
+/*    !*last child list*!*/
+/*    li:last-child{*/
+/*        font-weight: bold;*/
+/*    }*/
+/*    !*------------------------------------------------------------------------------------------------------------------------*!*/
+/*    !*n th child list*!*/
+/*    li:nth-child(3){*/
+/*        color: darkviolet;*/
+/*    }*/
+/*    li:nth-child(2){*/
+/*        color: cornflowerblue;*/
+/*    }*/
+
+/*    h4:nth-child(2){*/
+/*       background-color: chartreuse;*/
+/*    }*/
+
+/*    h4:nth-child(2){*/
+/*        background-color: chartreuse;*/
+/*    }*/
+/*    li:only-child{*/
+/*        color: fuchsia;*/
+/*    }*/
+
+    ol>li:first-child{
+        color:crimson;
+    }
+
+       h1:before{
+           content: "😘😍😍";
+           /*content: "hello";*/
+       }
+
+    h1:after{
+        content: "🫥🤢🤢";
+    }
+
+    h3:first-letter{
+        color: green;
+    }
+
+    p:first-line{
+        color: gold;
+    }
+
+    input::placeholder{
+        color: crimson;
+    }
+
+    input::file-selector-button{
+        background-color: chocolate;
+    }
+
+    /*input::-webkit-file-upload-button{*/
+    /*    background-color: chocolate;*/
+    /*}*/
+
+    ::selection{
+        background-color: cornflowerblue;
+        color:crimson;
+    }
+
+    ::marker{
+        content: "💩👄";
+    }
+
+    input::file-selector-button:hover{
+        background-color: darkblue;
+    }
+
+    h1,h3,h4{
+        color: mediumspringgreen;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<h2>FORM</h2>
+<form action="">
+    <label for="fname">First Name</label><br>
+    <input type="text" name="frame" id="fname" placeholder="type here"><br><br>
+
+    <label for="lrame">Last Name</label><br>
+    <input type="text" name="lrame" id="lrame"><br><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" name="email" id="email"><br><br>
+
+    <label for="message">Message</label><br>
+    <input type="text" name="frame" id="message"><br><br>
+
+
+    <input type="file">
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>

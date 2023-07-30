@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinator in CSS</title>
+
+    <style>
+        /*section>h4:last-child{*/
+        /*    color: crimson;*/
+        /*}*/
+        /*section>h4{*/
+        /*    color: cyan;*/
+        /*}*/
+
+        /*section>h4:nth-child(1){*/
+        /*    color: chocolate;*/
+        /*}*/
+
+        /*h4 + div{*/
+        /*    color: cornflowerblue;*/
+        /*}*/
+
+        /*h4 ~ div{*/
+        /*    color: darkgreen;*/
+        /*}*/
+
+            ul>ol>li:first-child{
+                color:crimson;
+            }
+        ul>ol>li:nth-child(2){
+            color:coral;
+        }
+
+        ul>ol>li:nth-child(3){
+            color:deeppink;
+        }
+
+        ul>ol>li:nth-child(4){
+            color:deeppink;
+        }
+
+        ol>ul>li:nth-child(2){
+            color: dodgerblue;
+        }
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<section>
+    <h4>Hello CSS</h4>
+    <h1>hahahaha</h1>
+    <div>
+        <h4>CSS Content</h4>
+        <div>Intro</div>
+        <div>Basics</div>
+    </div>
+    <div>
+        <div>Basics</div>
+    </div>
+    <h4 >Hello JS</h4>
+</section>
+
+<section>
+
+    <ul>
+        <li>Java</li>
+
+       <ol>
+           <li>Java Basic</li>
+           <li>JavaEE</li>
+           <li>Java Spring Boot</li>
+           <li>MySql</li>
+       </ol>
+
+
+
+        <li>UI Technologies</li>
+
+        <ol>
+            <li>HTML</li>
+            <ol>
+                <li>Introduction to HTML</li>
+                <li>HTML Text Formatting</li>
+                <li>HTML Multimedia</li>
+                <ul>
+                    <li>Add Images</li>
+                    <li>Add Videos</li>
+                    <li>Add Audios</li>
+                </ul>
+                <li>HTML Forms</li>
+                <li>HTML Tables</li>
+            </ol>
+
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+
+
+
+
+        <li>AWS and ML</li>
+    </ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
