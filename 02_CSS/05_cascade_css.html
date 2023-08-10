@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade CSS</title>
+
+    <style>
+
+        #btnid{
+            color: chartreuse;
+        }
+
+        .btn{
+            color: darkgreen;
+        }
+        button{
+            color: crimson;
+        }
+
+
+        button{
+            color: darkblue;
+        }
+
+        /*(0 0 0 4)*/
+        ol>li>ul>li{
+            color: darkblue;
+        }
+
+        /*(0 0 0 2)*/
+        ul>li:first-child{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--<button type="button">Click Me</button>-->
+<!--<button class="btn" type="button">Click Me</button>-->
+<button  id="btnid" class="btn" type="button">Click Me</button>
+
+<ol>
+    <li>
+        Java
+        <ul>
+            <li>Basic</li>
+            <li>ee</li>
+        </ul>
+    </li>
+    <li>YTY</li>
+    <li>YTY</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Sizing CSS</title>
+
+
+    <style>
+        /*1.content-box*/
+        /*2.border-box*/
+
+
+        .box{
+            width: 300px;
+            height: 200px;
+
+        }
+
+        #box1{
+            /*background-color: coral;*/
+            /*border: 10px solid crimson;*/
+            /*padding: 50px;*/
+
+            background-color: coral;
+            border: 10px solid crimson;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        #box2{
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="box" id="box1"></div>
+<div class="box" id="box2"></div>
+
+</body>
+</html>
