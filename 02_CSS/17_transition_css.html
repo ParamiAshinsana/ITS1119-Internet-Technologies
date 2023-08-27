@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition CSS</title>
+
+    <style>
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: crimson;
+            transition-duration: 3s;
+            transition-property: width,background-color,border-radius,transform;
+            transition-timing-function:ease-in ;
+        }
+
+        div:hover{
+            width: 400px;
+            background-color: cornflowerblue;
+            border-radius: 100%;
+            transform: rotate(360deg);
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+<div></div>
+</body>
+</html>
