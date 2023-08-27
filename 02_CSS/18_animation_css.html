@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations CSS</title>
+    <style>
+        div{
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: darkgreen;
+            animation-name: my_animation;
+            animation-duration: 0.00001s;
+            /*animation-direction: reverse;*/
+            animation-direction:alternate;
+            animation-iteration-count:infinite;
+            /*animation-delay: 2s;*/
+            animation-timing-function: ease-in;
+            /*animation-play-state: paused;*/
+            animation-play-state: running;
+
+            /*this is long hand animation*/
+            /*animation: my_animation 3s linear;*/
+
+        }
+
+        @keyframes my_animation {
+            from {
+                background-color: darkgreen;
+
+            }
+
+            to{
+                background-color: chartreuse;
+                /*width: 400px;*/
+                /*border-radius: 100%;*/
+                margin-left: 400px;
+
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div></div>
+
+</body>
+</html>
