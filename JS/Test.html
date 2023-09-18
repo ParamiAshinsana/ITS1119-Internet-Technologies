@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        #circle{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .switchOn{
+            background-color: yellow;
+            box-shadow: 0px 0px 5px 10px yellow;
+        }
+    </style>
+
+</head>
+<body>
+<h1>0</h1>
+<button type="button">Clicked!</button>
+<button type="reset">Reset</button>
+
+
+<div id="circle"></div>
+<button type="button" id="btn">OFF</button>
+<br>
+<br>
+
+<h1></h1>
+<input type="txt">
+<br>
+<br>
+
+<h1></h1>
+<input type="txt">
+<button type="button" id="show">SHOW</button>
+
+<h1></h1>
+<br>
+<input type="password" id="txt_field_password">
+<button type="button" id="password_btn">Show</button>
+
+
+<br>
+
+
+<script>
+    // document.getElementsByTagName("button")[0];
+    // document.getElementsByTagName("button")[0].addEventListener('click' , function (){
+    //     console.log("Clicked!!!!!")
+    // });
+
+    // document.querySelector("h1")[0].innerText = addEventListener('click' , function (){
+    //     console.log("Clicked!!!!!")
+    // });;
+
+    document.getElementsByTagName("button")[0].addEventListener('click' , function (){
+        const n = parseFloat(document.getElementsByTagName("h1")[0].innerText)
+        document.getElementsByTagName("h1")[0].innerText = n+1;
+        // document.getElementsByTagName("h1")[0].innerText = document.getElementsByTagName("h1")[0].innerText++;
+    });
+
+    document.getElementsByTagName("button")[1].addEventListener('click' , function (){
+        document.getElementsByTagName("h1")[0].innerText = 0;
+    });
+
+    // document.getElementsByTagName("button").innerText = "ON";
+    // document.getElementsByTagName("button")[0].innerText = addEventListener('click' , function (){
+    //     console.log("ON")
+    // });;
+
+
+
+
+    // my
+
+
+
+
+
+    // document.getElementsByTagName("button")[0].addEventListener('click' , function (){
+    //     // const n = parseFloat(document.getElementsByTagName("h1")[0].innerText)
+    //     document.getElementsByTagName("button")[0].innerText = "ON";
+    //     document.getElementsByTagName("div")[0].style.borderColor = "yellow";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // document.getElementsByTagName("h1")[0].innerText = document.getElementsByTagName("h1")[0].innerText++;
+    // });
+
+    // document.getElementsByTagName("button")[0].addEventListener('click' , function (){
+    //     document.getElementsByTagName("bottun")[0].innerText = "OFF";
+    // });
+
+
+    var isOn = false;
+    document.getElementById("btn").addEventListener('click' , ()=>{
+       if(isOn){
+           isOn = false;
+           document.getElementById("btn").innerText = "OFF";
+           document.getElementById("circle").classList.remove("switchOn");
+
+       }else{
+           isOn = true;
+           document.getElementById("btn").innerText = "ON";
+           document.getElementById("circle").classList.add("switchOn");
+       }
+
+
+        // document.getElementsByTagName("button")[0].innerText = "ON";
+        // document.getElementsByTagName("div")[0].style.borderColor = "yellow";
+
+    });
+
+    document.getElementsByTagName("input")[0].addEventListener('input' , (event)=>{
+         console.log(event.target.value)
+    });
+
+    document.getElementsByTagName("input")[0].addEventListener('input' , (event)=>{
+        document.getElementsByTagName("h1")[1].innerText = event.target.value;
+    });
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+    document.getElementById("show").addEventListener('click' , ()=>{
+        var value = document.getElementsByTagName("input")[1].value;
+        document.getElementsByTagName("h1")[2].innerText = value;
+    });
+
+    // -------------------------------------------------------------------------------------------------------------------------
+
+    // document.getElementById("txt_field_password").getAttribute("type");
+    // document.getElementsByTagName("input")[0].getAttribute("type");
+    // document.getElementsByTagName("input")[0].setAttribute("type" , "password");
+
+    document.getElementById("password_btn").addEventListener('click' , ()=>{
+        var attribute = document.getElementById("txt_field_password").getAttribute("type");
+
+        if(attribute === "password"){
+            document.getElementById("txt_field_password").setAttribute("type","text");
+        }else{
+            document.getElementById("txt_field_password").setAttribute("type","password");
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
