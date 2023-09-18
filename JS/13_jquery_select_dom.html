@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello JavaScript</h1>
+<h2>Hello JQuery</h2>
+
+<section>
+    <ul>
+        <li>gh1</li>
+        <li>gh2</li>
+        <li>gh3</li>
+        <li>gh4</li>
+    </ul>
+</section>
+
+<section>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolores enim iusto laboriosam numquam sequi, ullam.
+        Aliquid delectus eius, error expedita fuga hic, ipsa iusto natus nesciunt, praesentium veniam voluptatem!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolores enim iusto laboriosam numquam sequi, ullam.
+        Aliquid delectus eius, error expedita fuga hic, ipsa iusto natus nesciunt, praesentium veniam voluptatem!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolores enim iusto laboriosam numquam sequi, ullam.
+        Aliquid delectus eius, error expedita fuga hic, ipsa iusto natus nesciunt, praesentium veniam voluptatem!
+    </p>
+</section>
+
+
+<script src="assets/lib/jquery.min.js"></script>
+<script>
+    document.getElementsByTagName("h1")[0].innerText;
+    document.getElementsByTagName("h2")[0].innerText;
+    'Hello JQuery'
+    $("h2").eq(1).text();
+    ''
+    $("h2").eq(0).text();
+    'Hello JQuery'
+
+    document.getElementsByTagName("h1")[0].innerText = "hello"
+    $("h1").last().text("HIIiiiiiii");
+
+    $('section').first().text();
+</script>
+</body>
+</html>

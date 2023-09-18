@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #circle{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .switchOn{
+            background-color: yellow;
+            box-shadow: 0px 0px 5px 10px yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!--<button type="button">Click!</button>-->
+<br>
+<br>
+<h1>0</h1>
+<!--<button type="button">Clicked!</button>-->
+<!--<button type="reset">Reset</button>-->
+
+<!--<div id="circle"></div>-->
+<!--<button type="button" id="btn">OFF</button>-->
+<br>
+<br>
+<input type="txt">
+<button type="button" id="send">Send</button>
+
+<script src="assets/lib/jquery.min.js"></script>
+
+<script>
+    // $('button').on('click', () =>{
+    //     console.log("Clicked!")
+    // });
+    //
+    // var clickTxt = 0;
+    // $('button').on('click' , ()=>{
+    //     clickTxt++;
+    //     $("h1").text(clickTxt);
+    //
+    // });
+    //
+    // $('button').eq(1).on('click' , ()=>{
+    //     clickTxt = 0;
+    //     $("h1").text(clickTxt);
+    //
+    // });
+
+
+    // my
+
+    // var isOn = false;
+    // $('#btn').on('click' , ()=>{
+    //     if(isOn){
+    //         isOn = false;
+    //         $("#btn").text("Off");
+    //     }else{
+    //         isOn = true;
+    //         $("#btn").text("On");
+    //     }
+    // });
+
+    var isOn = false;
+    $('#btn').on('click' , ()=>{
+        if(isOn){
+            isOn = false;
+            $("#btn").text("Off");
+            $("#circle").removeClass("switchOn");
+        }else{
+            isOn = true;
+            $("#btn").text("On");
+            $("#circle").addClass("switchOn");
+        }
+    });
+
+    // $('input').on('input' , (event) =>{
+    //     console.log(event.target.value);
+    // });
+
+    $('#send').on('click' , (event) =>{
+       var value = $('input').val();
+        console.log(value);
+    });
+
+
+
+</script>
+</body>
+</html>
