@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<br>
+<br>
+<input type="txt" id="first">
+<input type="txt" id="second">
+<button type="button" id="send">Send</button>
+<br>
+<br>
+<br>
+
+
+
+<script src="assets/lib/jquery.min.js"></script>
+
+<script>
+
+    $('#send').on('click' , (event) =>{
+        var value = $("#first").val();
+        console.log(value);
+    });
+
+    $('#send').on('click' , (event) =>{
+        var value = $("#second").val();
+        console.log(value);
+    });
+    // student_id
+    // first_name
+    // last_name
+    // Textarea
+    // radio1
+    // radio2
+    // id_submit
+
+</script>
+</body>
+</html>

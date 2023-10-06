@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Bootstrap Grid System</title>
     <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css_assets/bootstrap/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../JS/assets/bootstrap/bootstrap-5.3.1-dist/css/bootstrap.min.css">
 
     <style>
         body{
-            background-color: mediumspringgreen;
+            background-color: whitesmoke;
         }
 
     </style>
@@ -21,58 +21,42 @@
         <!--        form-->
         <div class="col">
             <form>
-                <!--                <div class="mb-3">-->
-                <!--                    <label for="exampleInputEmail1" class="form-label">Email address</label>-->
-                <!--                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
-                <!--                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
-                <!--                </div>-->
-                <!--                <div class="mb-3">-->
-                <!--                    <label for="exampleInputPassword1" class="form-label">Password</label>-->
-                <!--                    <input type="password" class="form-control" id="exampleInputPassword1">-->
-                <!--                </div>-->
-                <!--                <div class="mb-3 form-check">-->
-                <!--                    <input type="radio" class="form-check-input" id="exampleCheck1">-->
-                <!--                    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-                <!--                </div>-->
-                <!--                <button type="submit" class="btn btn-primary">Submit</button>-->
-
 
                 <div class="text-center">
                     <h2>Customer Details</h2>
                 </div>
                 <div class="mb-3">
                     <label for="student_id" class="form-label">ID</label>
-                    <input type="number" class="form-control" id="student_id" >
-                    <!--                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                    <input type="txt" class="form-control" id="student_id" name="myInput">
                 </div>
 
                 <div class="mb-3">
                     <label for="first_name" class="form-label">First Name</label>
-                    <input type="number" class="form-control" id="first_name" >
+                    <input type="txt" class="form-control" id="first_name" >
                 </div>
 
                 <div class="mb-3">
                     <label for="last_name" class="form-label">Last Name</label>
-                    <input type="number" class="form-control" id="last_name" >
+                    <input type="txt" class="form-control" id="last_name" >
                 </div>
 
 
                 <div class="mb-3">
-                    <label for="floatingTextarea2">Address</label>
-                    <textarea class="form-control" placeholder="Enter Your Address" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="Textarea">Address</label>
+                    <textarea class="form-control" placeholder="Enter Your Address" id="Textarea" style="height: 100px"></textarea>
                 </div>
 
                 <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="radio" id="ridio1">
-                    <label  class="form-check-label" for="ridio1" >DEP</label>
+                    <input  class="form-check-input" type="radio" name="radio_default1" id="radio1" value="DEP">
+                    <label  class="form-check-label" for="radio1" >DEP</label>
                 </div>
                 <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="radio" id="ridio2">
-                    <label  class="form-check-label" for="ridio2" >GDSE</label>
+                    <input  class="form-check-input" type="radio" name="radio_default1" id="radio2" value="GDSE">
+                    <label  class="form-check-label" for="radio2" >GDSE</label>
                 </div>
 
                 <div class="mt-5 m-5">
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-success" id="id_submit">Submit</button>
                     <button type="button" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-danger">Delete</button>
                     <button type="button" class="btn btn-warning">Reset</button>
@@ -94,7 +78,7 @@
                     <th scope="col">GDSE/DEP</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="student_table_body">
                 <tr>
                     <th scope="row">1</th>
                     <td>Parami</td>
@@ -111,7 +95,7 @@
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <!--                    <td colspan="2">Larry the Bird</td>-->
+                    <!-- <td colspan="2">Larry the Bird</td>-->
                     <td>Yasandi</td>
                     <td>Sehansa</td>
                     <td>Panadura</td>
@@ -124,11 +108,54 @@
     </div>
 </div>
 
+<script src="../JS/assets/bootstrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 <script src="assets/lib/jquery.min.js"></script>
-<script src="css_assets/bootstrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
 
 <script>
-    
+    // $("button").eq(0).on('click' , () =>{
+    //     console.log($("input").eq(0).val());
+    // });
+    // $("button").eq(0).on('click' , () =>{
+    //     console.log($("input").eq(1).val());
+    // });
+    // $("button").eq(0).on('click' , () =>{
+    //     console.log($("input").eq(2).val());
+    // });
+    // $("button").eq(0).on('click' , () =>{
+    //     console.log($("textarea").eq(3).val());
+    // });
+
+    //----------------------------------------------
+    $("button[type='button']").eq(0).on('click' , () =>{
+        let student_id = $("#student_id").val();
+        let first_name = $("#first_name").val();
+        let last_name = $("#last_name").val();
+        let Textarea = $("#Textarea").val();
+        let program = $("input[name='radio_default']:checked").val();
+
+        console.log(`Student Id :${student_id}\n First Name : ${first_name}\n Last Name : ${last_name} \n Address : ${Textarea} \n Program : ${program}`);
+        // console.log('Student Id :${student_id} \n First Name : ${first_name} \n Last Name : ${last_name} \n Address : ${Textarea} \n Program : ${program}');
+
+        // $("#student_table_body").append("<h1>hello</h1>");
+
+        // $("#student_table_body".type['scope'].eq(0).append('#student_id'));
+        // $("#student_table_body".type['scope'].eq(1).append('#first_name'));
+
+        // var cell = $(this).find("td");
+        // cell.each{function ()}
+
+        $(".table").append("<tr><th>");
+    });
+
+
+    // when click a table's row jump to again fields to that details
+    $("tbody").on('click' ,"tr", () =>{
+        let data_col = $(this).find("td");
+        console.log(data_col);
+    });
+
+
+
 </script>
 
 </body>

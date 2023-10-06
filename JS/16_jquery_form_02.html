@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../JS/assets/bootstrap/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../02_CSS/assest/Css/normalize.css">
+
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h3>Student Details</h3>
+            </div>
+
+            <form >
+                <div class="mb-3">
+                    <label for="Student_id" class="form-label">Id</label>
+                    <input type="number" class="form-control" id="Student_id" >
+                </div>
+                <div class="mb-3">
+                    <label for="First-name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="First-name" >
+                </div>
+                <div class="mb-3">
+                    <label for="Last-Name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="Last-name">
+                </div>
+                <div class="mb-3">
+                    <label for="Address" class="form-label">Address</label>
+                    <textarea class="form-control" id="Address" rows="3" placeholder="Enter your Address"></textarea>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            GDSE
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            DEP
+                        </label>
+                    </div>
+                    <div class="mt-5">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-danger">Update</button>
+                        <button type="button" class="btn btn-warning">Delete</button>
+                        <button type="reset" class="btn btn-info">Reset</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">GDSE/DEP</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Nishini</td>
+                    <td>Silva</td>
+                    <td>Panadura</td>
+                    <td>GDSE</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Shilashi</td>
+                    <td>Perera</td>
+                    <td>Moratuva</td>
+                    <td>DEP</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Ranisha</td>
+                    <td>Fernando</td>
+                    <td>Colombo</td>
+                    <td>DEP</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script src="../JS/assets/bootstrap/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="assets/lib/jquery.min.js"></script>
+<script>
+    var row_index=null;
+
+    const clear = () =>{
+        $("#Student_id").val("");
+        $("#First-name").val("");
+        $("#Last-name").val("");
+        $("#Address").val("");
+        $(`input[name='flexRadioDefault'][value='${st_program}']`).prop("checked",true);
+    }
+    //submit
+    //   $("button[type='button']").eq(0).on("click",()=>{
+    //     // console.log("Hello");
+    //     console.log($("input").eq(0).val());
+    //   });
+    //   $("button[type='button']").eq(0).on("click",()=>{
+    //   // console.log("Hello");
+    //   console.log($("input").eq(1).val());
+    // });
+    //
+    //   $("button[type='button']").eq(0).on("click",()=>{
+    //   // console.log("Hello");
+    //   console.log($("input").eq(2).val());
+    //   });
+    //
+    //   $("button[type='button']").eq(0).on("click",()=>{
+    //   // console.log("Hello");
+    //   console.log($("input").eq(3).val());
+    //   });
+
+    $("button[type='button']").eq(0).on("click",()=> {
+        // var row_index = null;
+        console.log("Hello");
+
+        let student_id = $("#Student_id").val();
+        let first_name = $("#First-name").val();
+        let last_name = $("#Last-name").val();
+        let address = $("#Address").val();
+        let program = $("input[name='flexRadioDefault']:checked").val();
+
+        console.log(`StudentId: ${student_id}FirstName: ${first_name}LastName: ${last_name} Address: ${address} Program: ${program}`);
+
+        let records = $(".table").append("<tr><th scope=\"row\">" + student_id + "</th><td>" + $("input").eq(1).val() + "</td><td>" + $("input").eq(2).val() + "</td><td>" + $("textarea").val() + "</td><td>" + program + "</td></tr>");
+
+
+        // one more method to clear all fields
+        $("button[type='reset']").click();
+    });
+
+    $("tbody").on("click","tr",function(){
+        // console.log("hello");
+        // let data_col=$(this).find("td");
+        // console.log(data_col);
+        // data_col.each(function (){
+        //     console.log($(this).text());
+        // })
+
+        row_index = $(this).index();
+        console.log(row_index);
+
+        let st_id = $(this).find(".student_id").text();
+        let st_fname = $(this).find(".student_id").text();
+        let st_lName = $(this).find(".student_id").text();
+        let st_address = $(this).find(".student_id").text();
+        let st_program = $(this).find(".student_id").text();
+
+        $("#Student_id").val(st_id);
+        $("#First-name").val(st_fname);
+        $("#Last-name").val(st_lName);
+        $("#Address").val(st_address);
+        $("input[name='flexRadioDefault']:checked").val(st_program);
+
+    });
+
+    //update
+    $("button[type='button']").eq(1).on("click",()=>{
+
+        let student_id = $("#Student_id").val();
+        let first_name = $("#First-name").val();
+        let last_name = $("#Last-name").val();
+        let address = $("#Address").val();
+        let program = $("input[name='flexRadioDefault']:checked").val();
+
+        console.log(`StudentId: ${student_id}FirstName: ${first_name}LastName: ${last_name} Address: ${address} Program: ${program}`);
+
+        let records = $(".table").append("<tr><th scope=\"row\">" + student_id + "</th><td>" + $("input").eq(1).val() + "</td><td>" + $("input").eq(2).val() + "</td><td>" + $("textarea").val() + "</td><td>" + program + "</td></tr>");
+
+
+
+        row_index = $(this).index();
+        console.log(row_index);
+
+        let st_id = $(this).find(".student_id").text();
+        let st_fname = $(this).find(".student_id").text();
+        let st_lName = $(this).find(".student_id").text();
+        let st_address = $(this).find(".student_id").text();
+        let st_program = $(this).find(".student_id").text();
+
+        $("#Student_id").val(st_id);
+        $("#First-name").val(st_fname);
+        $("#Last-name").val(st_lName);
+        $("#Address").val(st_address);
+        $("#Address")
+        $(`input[name='flexRadioDefault'][value='${st_program}']`).prop("checked",true);
+
+        $("tbody>tr").eq(row_index).html(records);
+    });
+
+    //delete
+    $("button[type='button']").eq(2).on("click",()=>{
+        console.log("Hello");
+        $("tbody>tr").eq(row_index).remove(records);
+    });
+
+    //Reset
+    $("button[type='reset']").eq(3).on("click",()=>{
+        console.log("Hello");
+
+
+    });
+
+</script>
+</body>
+</html>

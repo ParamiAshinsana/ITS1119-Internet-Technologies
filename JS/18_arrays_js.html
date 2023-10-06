@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="assets/lib/jquery.min.js"></script>
+<script>
+    // Literal Arrays(most use)
+    var ar1 = [];
+    ar1=[1,2,"IJSE","GDSE",true,{name:"Malith",age:52},function(){},'kl'];
+
+    // Constructor Arrays
+    var ar2 = new Array(1,2,3,"ijse",true,{name:"Malith",age:52},function(){},'kl');
+    var ar3 = ["A","B","C","D","E","F"];
+    ar3[1]; //"A"
+    ar3[2]; //"B"
+    ar3[3]; //"C"
+    ar3[4]; //"D"
+    ar3[5]; //"E"
+    ar3[6]; //"F"
+
+    //-------------------------------Arrays Method--------------------------------------------------
+    //-----01.push();--------------------------------------------------
+    var ar4 = ["A","B","C","D","E","F"];
+    ar4;//6
+    ar4.push("GH");
+    ar4;//7
+    //-----02.pop();<---remove last index-----------------------------------------------
+    var ar5 = ["A","B","C","D","E","F"];
+    ar5;//6
+    ar5.pop();
+    //'G'<---remove this
+    //<----["A","B","C","D","E","F"]
+    ar5;//<-----["A","B","C","D","E"]
+    //-----03.shift();-<---remove first index-------------------------------------------------
+    var ar6 = ["A","B","C","D","E","F"];
+    ar6.shift();
+    ar6;//<-----["B","C","D","E","F"]
+
+    //-----04.unshift();-<---add index(able to more index add)-------------------------------------------------
+    var ar6 = ["A","B","C","D","E","F"];
+    ar6.unshift("GH");
+    ar6;//<-----["A","B","C","D","E","GH"]
+    ar6.unshift("IJ");
+    ar6;//<-----["A","B","C","D","E","GH","IJ"]
+
+    //-----05.concat();-<---arrays kihipayak ekathu kirimata-------------------------------------------------
+    var ar6 = ["A","B","C"];
+    var ar7 = ["D","E","F"];
+    ar6.concat(ar7);//<------["A","B","C","D","E","F"];
+
+    //-----06.slice();-<---(index not item)argument ekk vdihta count ekk yavala e gana remove kra gnna pluvn-------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F"];
+    ar8.slice();//<------["A","B","C","D","E","F"];
+    ar8.slice(1);//<------["B","C","D","E","F"];
+    ar8.slice(2);//<------["C","D","E","F"];
+
+    //-----06.splice();-<------copy ekk nogena ona gana ven krla gnna pluvn----------------------------------------------
+    var ar8 = ["A","B","C","D","E","F"];
+    ar8.splice(3);//<------(3['D', 'E', 'F']
+    ar8;//,<-----(3)['A', 'B', 'C']
+        //-----06.splice();-<----------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F"];
+    ar8.splice(0,1,"Hello");
+    ar8;//<------["Hello","B","C","D","E","F"];
+    //-----09.indexOf();-<----------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F"];
+    ar8.indexOf("A");//0
+    var ar9 = ["A","B","C","D","E","F","A"];
+    ar9.indexOf("A");//0
+    //-----09.lastIndexOf();-<----------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F","A"];
+    ar8.lastIndexOf("A");//<----6
+    //-----09.includes();-<----------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F","A"];
+    ar8.includes("A");
+    //true
+    ar8.includes("R");
+    //false
+    ar8.includes("Q");
+    //false
+    //-----09.filter(item)=>{return item === "A"};-<----------------------------------------------------
+    var ar8 = ["A","B","C","D","E","F","A"];
+    ar8.filter((item)=>{return item === "A"});
+    //(2).["A","A"]
+
+    var q = [1,2,3,4,5,6,7,8,9,10];
+    q.filter((item)=>{return item%2==0});
+
+    //-----09.map();-<----------------------------------------------------
+    var ar8 = [1,2,3,4];
+    ar8.map((result) => {console.log(result)});
+    //1
+    //2
+    //3
+    //4
+    //-----09.foreach();-<----------------------------------------------------
+    var ar8 = [1,2,3,4];
+    ar8.foreach((result) => {console.log(result)});
+    //1
+    //2
+    //3
+    //4
+
+    //-----09.sort();-<----------------------------------------------------
+    var q = [3,8,5,4,7,6,2,9,1,10];
+    q.sort();
+    //[1,2,3,4,5,6,7,8,9,10]
+    // 12,13,14 vge numbers dekk nm ok nthtm 100.300,560, vge ekma type eke vena ona
+    // sort  eka gnne string vdihtai
+
+    //-----09.reverse();-<----------------------------------------------------
+    var ar8 = ["IJSE","DEP","CMJD"];
+    ar8.reverse();
+    //["CMJD","DEP","IJSE"]
+
+    //-----09.some();ekak hri tiyenvnmm true return krnva-<----------------------------------------------------
+    var ar8 = ["IJSE","DEP","CMJD"];
+    ar8.some((item) =>{return item=="DEP";})
+    //true
+    ar8.some((item) =>{return item=="ASD";})
+    //false
+
+    //-----09.every();hamoma true krnna ona nthtm false return venne-<----------------------------------------------------
+    var ar8 = ["IJSE","DEP","CMJD"];
+    ar8.every((item) =>{return item=="DEP";})
+    //false
+    ar8.some((item) =>{return item=="ASD";})
+    //true
+
+    //-----09.join();string ekk aran one by one " , "add krnva-<----------------------------------------------------
+    var q = [1,2,3,4,5,6,7,8,9,10];
+    q.join();//'1,2,3,4,5,6,7,8,9,10'
+
+    q.join("./");//1./2./3./4./5./6./7./8./9./10
+
+    //-----09.toString();-<----------------------------------------------------
+    var q = [1,2,3,4,5,6,7,8,9,10];
+    q.toString();
+    //'1,2,3,4,5,6,7,8,9,10'
+
+    //-----09.length();-<----------------------------------------------------
+    var q = [1,2,3,4,5,6,7,8,9,10];
+    q.length();
+    //10
+
+
+</script>
+</body>
+</html>

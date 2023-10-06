@@ -18,6 +18,18 @@
             background-color: yellow;
             box-shadow: 0px 0px 5px 10px yellow;
         }
+        #box1{
+            width: 400px;
+            height: 400px;
+            border: 10px;
+            background-color: cornflowerblue;
+        }
+        #box2{
+            width: 200px;
+            height: 200px;
+            border: 10px;
+            background-color: chocolate;
+        }
     </style>
 </head>
 <body>
@@ -25,16 +37,46 @@
 <!--<button type="button">Click!</button>-->
 <br>
 <br>
-<h1>0</h1>
-<!--<button type="button">Clicked!</button>-->
-<!--<button type="reset">Reset</button>-->
+<!--<h1>0</h1>-->
+<!--&lt;!&ndash;<button type="button">Clicked!</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="reset">Reset</button>&ndash;&gt;-->
 
-<!--<div id="circle"></div>-->
-<!--<button type="button" id="btn">OFF</button>-->
+<!--&lt;!&ndash;<div id="circle"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="button" id="btn">OFF</button>&ndash;&gt;-->
+<!--<br>-->
+<!--<br>-->
+<!--<input type="txt">-->
+<!--&lt;!&ndash;<button type="button" id="send">Send</button>&ndash;&gt;-->
+
+<!--<button type="button"> CLICKED!!</button>-->
+<div id="box1">
+    <div id="box2"></div>
+</div>
 <br>
 <br>
-<input type="txt">
-<button type="button" id="send">Send</button>
+<br>
+<button type="button" id="button2">Clicked Me!</button>
+<br>
+<br>
+<br>
+<br>
+<label for="input2" class="form-label">ID</label>
+<input type="text" class="form-control" id="input2">
+<br>
+<br>
+<br>
+<br>
+<input type="text"  id="input3">
+
+<br>
+<br>
+<br>
+<br>
+<input type="radio" name="radioInput" id="gdse" value="GDSE">
+<label for="gdse" >GDSE</label>
+
+<input type="radio" name="radioInput" id="dep" value="DEP">
+<label for="dep">DEP</label>
 
 <script src="assets/lib/jquery.min.js"></script>
 
@@ -70,27 +112,100 @@
     //     }
     // });
 
-    var isOn = false;
-    $('#btn').on('click' , ()=>{
-        if(isOn){
-            isOn = false;
-            $("#btn").text("Off");
-            $("#circle").removeClass("switchOn");
-        }else{
-            isOn = true;
-            $("#btn").text("On");
-            $("#circle").addClass("switchOn");
-        }
-    });
+    // var isOn = false;
+    // $('#btn').on('click' , ()=>{
+    //     if(isOn){
+    //         isOn = false;
+    //         $("#btn").text("Off");
+    //         $("#circle").removeClass("switchOn");
+    //     }else{
+    //         isOn = true;
+    //         $("#btn").text("On");
+    //         $("#circle").addClass("switchOn");
+    //     }
+    // });
 
     // $('input').on('input' , (event) =>{
     //     console.log(event.target.value);
     // });
 
-    $('#send').on('click' , (event) =>{
-       var value = $('input').val();
-        console.log(value);
+    // $('#send').on('click' , (event) =>{
+    //    var value = $('input').val();
+    //     console.log(value);
+    // });
+    // ---------------------------------double clicked-------------------------------------------------------------------------------------------------------
+    $("button").on("dbclick" , () =>{
+        console.log("Hello");
     });
+// -----------------------------------mouse enter-----------------------------------------------------------------------------------------------------
+    $("#box1").on("mouseenter" , () =>{
+        console.log("Mouse Enter");
+    });
+    // -----------------------------------mouse leave-----------------------------------------------------------------------------------------------------
+    $("#box1").on("mouseleave" , () =>{
+        console.log("Mouse Leave");
+    });
+
+    // -----------------------------------mouse Down-----------------------------------------------------------------------------------------------------
+    $("#button2").on("mousedown" , () =>{
+        console.log("Mouse Down");
+    });
+
+    // -----------------------------------mouse up-----------------------------------------------------------------------------------------------------
+    $("#button2").on("mouseup" , () =>{
+        console.log("Mouse Up");
+    });
+    // -----------------------------------mouse presse-----------------------------------------------------------------------------------------------------
+    $("#button2").on("click" , () =>{
+        console.log("Mouse Press");
+    });
+    // -----------------------------------mouse over-----------------------------------------------------------------------------------------------------
+
+    $("#box1").on("mouseover" , () =>{
+        console.log("Mouse Over");
+    });
+    // -----------------------------------focused and when it green-----------------------------------------------------------------------------------------------------
+
+    $("#input2").on("focus" , () =>{
+        console.log("Focused!");
+        $("#input2").css("background","green");
+    });
+    // -----------------------------------focusOut and when it yellow-----------------------------------------------------------------------------------------------------
+    $("#input2").on("blur" , () =>{
+        console.log("Focuse Out !!!");
+        $("#input2").css("background","yellow");
+    });
+
+    // -----------------------------------keyUp(text field eke type krddi event eka venva)----------------------------------------------------------------------------------------------------
+    $("#input3").on("keyup" , () =>{
+        console.log("Key Up!!");
+    });
+    // -----------------------------------keyDown----------------------------------------------------------------------------------------------------
+    $("#input3").on("keydown" , () =>{
+        console.log("Key Down!!");
+    });
+    // -----------------------------------keyPressed----------------------------------------------------------------------------------------------------
+    $("#input3").on("keypress" , () =>{
+        console.log("Key press!!");
+    });
+
+    // -----------------------------------keyPressed----------------------------------------------------------------------------------------------------
+    $("#input3").on("keypress" , (event) =>{
+        let keyCode = event.which;
+        if(keyCode == 13){
+            console.log("Enter Key");
+        }
+        // console.log("Key press!!" , keyCode);
+    });
+    // -----------------------------------Radio Button Change---------------------------------------------------------------------------------------------------
+    $("input[name='radioInput']").on("change" , () =>{
+            console.log("Changed!");
+    });
+    // -----------------------------------Radio Button Change---------------------------------------------------------------------------------------------------
+    $("input[name='radioInput']").on("change" , (event) =>{
+        console.log(event.target.value);
+    });
+
 
 
 
